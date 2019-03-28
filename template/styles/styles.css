@@ -8,17 +8,21 @@
     padding: 0;
 }
 
+/* fonts */
 h1 {
     background-color: #0060A0;
     color: white;
     width: 100%;
     padding: 10px;
     font-size: 53px;
-    float: none;
 }
 
-.h1::before {
-    background-image: url("/media/logo-wikipraktika.svg");
+h2 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+
 
 }
 
@@ -28,13 +32,26 @@ body {
     font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
 }
 
+body > header {
+    margin-bottom: 40px;
+}
+
+nav {
+    padding-left: 5px;
+}
+nav > * {
+    padding-left: 0;
+}
+
+
+
 
 /* images */
-#titleimage {
+#logo {
     display: inline;
     position: relative;
     float: left;
-    padding-top: 10px;
+    padding: 5px;
 }
 
 
