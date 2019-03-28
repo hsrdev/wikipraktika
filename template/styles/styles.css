@@ -1,47 +1,63 @@
 /* reset */
-*  {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #0060A0;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 53px;
+    float: none;
+}
+
+.h1::before {
+    background-image: url("/media/logo-wikipraktika.svg");
+
 }
 
 /* document */
 body {
-	font-size: 1rem;
-	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
 }
 
 
-
 /* images */
-
+#titleimage {
+    display: inline;
+    position: relative;
+    float: left;
+    padding-top: 10px;
+}
 
 
 /* text */
 
 
-
 /* lists */
-
 
 
 /* table */
 
 
-
 /* forms */
 
 
-
 #font-size-form {
-	float: right;
+    float: right;
 }
+
 #font-size-form > label, #font-size-form > input, #font-size-form > output {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0; margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
 }
 
