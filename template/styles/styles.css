@@ -13,15 +13,14 @@ h1 {
     background-color: #0060A0;
     color: white;
     width: 100%;
-    padding: 10px;
-    font-size: 53px;
+    padding: 1rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 2em;
     display: block;
+    padding: 0.5rem;
 
 
 }
@@ -33,19 +32,18 @@ body {
 }
 
 body > header {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 nav {
-    padding-left: 5px;
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
-nav > * {
-    padding-left: 0;
+
+nav > header {
+    margin-left: 0.5rem;
 }
-
-
-
-
 /* images */
 #logo {
     display: inline;
@@ -59,7 +57,19 @@ nav > * {
 
 
 /* lists */
+nav > ul {
+    border: black solid 0.1rem;
+    background-color: #F4F3F4;
+    padding: 0.5em;
+}
 
+li, ul {
+    list-style-type: none;
+}
+
+nav > ul > li  > ul {
+    margin-left: 1rem;
+}
 
 /* table */
 
