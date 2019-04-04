@@ -9,6 +9,50 @@
 }
 
 /* fonts */
+#font-size-form > label, #font-size-form > input, #font-size-form > output {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+#font-size-form {
+    float: right;
+}
+/* document */
+body {
+    font-size: 1rem;
+    font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+    counter-reset: h3;
+}
+
+main, nav {
+    margin-left: 1rem;
+    counter-reset: h3;
+}
+
+body > header {
+    margin-bottom: 2.5rem;
+}
+
+nav {
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+}
+
+article {
+    display: block;
+}
+/* images */
+#logo {
+    display: inline;
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+
+/* text */
 h1 {
     background-color: #0060A0;
     color: white;
@@ -21,41 +65,24 @@ h2 {
     font-size: 2em;
     display: block;
     padding: 0.5rem;
-
-
 }
 
-/* document */
-body {
-    font-size: 1rem;
-    font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+h3 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px black;
 }
 
-body > header {
-    margin-bottom: 2.5rem;
+h3:before {
+    content: counter(h3);
+    counter-increment: h3;
+    padding-right: 1rem;
 }
-
-nav {
-    margin-top: 2rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+p {
+    padding-top: 0.5rem;
 }
-
-nav > header {
-    margin-left: 0.5rem;
-}
-/* images */
-#logo {
-    display: inline;
-    position: relative;
-    float: left;
-    padding: 5px;
-}
-
-
-/* text */
-
-
 /* lists */
 nav > ul {
     border: black solid 0.1rem;
@@ -75,7 +102,9 @@ nav > ul > li  > ul {
 
 
 /* forms */
-
+form {
+    padding: 0.5rem;
+}
 
 #font-size-form {
     float: right;
