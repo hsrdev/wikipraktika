@@ -115,6 +115,14 @@ a[lang='en']:before {
     width: 20%;
 }
 
+iframe {
+    width: 100%;
+    height: 600px;
+}
+video {
+    width: 100%;
+}
+
 /* text */
 h1 {
     background-color: #0060A0;
@@ -156,6 +164,7 @@ p {
 .last_changed {
     border: 2px dotted black;
     font-style:italic;
+    margin-bottom: 1rem;
 }
 .last_changed_left {
     display:block;
@@ -169,6 +178,17 @@ p {
     text-align: right;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+}
+
+.video_caption {
+    font-size: 0.9rem;
+    color: rgb(127, 127, 127);
+    padding-bottom: 1rem;
+}
+.reference, .reference>a {
+    font-size: 0.9rem;
+    color: black;
+    padding-bottom: 1.5rem;
 }
 
 /* lists */
