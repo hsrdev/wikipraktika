@@ -176,6 +176,9 @@ p {
     padding-bottom: 1.5rem;
 }
 
+.caption {
+    color: #888888;
+}
 /* lists */
 .navigation {
     margin: 2rem 0.5rem;
@@ -192,6 +195,21 @@ li, ul {
 
 nav > ul > li  > ul {
     margin-left: 1rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #005da0;
+}
+
+dd {
+    margin-left: 1rem;
+}
+
+dd:before {
+    content: "\2316";
+    margin-right: 0.2rem;
+    font-weight: bold;
 }
 
 /* table */
