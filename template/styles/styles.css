@@ -20,29 +20,6 @@
     float: right;
 }
 
-@font-face {
-    font-family: "URW Gothic L";
-    src: url("../../media/urwgothicl_normal.ttf");
-}
-
-@font-face {
-    font-family: "URW Gothic L";
-    src: url("../../media/urwgothicl_bold.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "URW Gothic L";
-    src: url("../../media/urwgothicl_italic.ttf");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "URW Gothic L";
-    src: url("../../media/urwgothicl_bolditalic.ttf");
-    font-weight: bold;
-    font-style: italic;
-}
 /* document */
 body {
     font-size: 1rem;
@@ -151,7 +128,6 @@ a[hreflang]::before {
     background-size: 100% 100%;
     width: 1em;
     height: 0.75em;
-    float: left;
     margin-right: 0.2em;
     content: '';
     margin-top: 5px;
