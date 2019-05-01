@@ -73,6 +73,32 @@ small {
 small > a {
     color: black;
 }
+
+footer{
+    width: 100%;
+    background-color: rgb(0, 96, 160);
+    color: white;
+}
+.text_italic{
+    font-style: italic;
+}
+#conditions, address{
+    padding: 6px 15px 6px 6px;
+}
+#conditions span,
+#conditions p,
+#conditions img,
+#conditions a{
+    display:inline;
+    font-size: smaller;
+    color: white;
+}
+address a{
+    font-style: normal;
+    color: white;
+}
+
+
 /* images */
 #logo {
     margin: .5rem;
@@ -109,6 +135,17 @@ iframe {
 }
 video {
     width: 100%;
+}
+
+#png_license{
+    vertical-align: middle;
+}
+#svg_icon-search {
+    display: flow;
+    position: center;
+    width: 18px;
+    margin: 2px 5px 2px 5px;
+    vertical-align: middle;
 }
 
 /* hreflang */
@@ -275,3 +312,118 @@ form {
     margin: 0;
 }
 
+#form_legal, #form_autor {
+    border: 1px solid rgb(137, 137, 137);
+    color: rgb(137, 137, 137);
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    padding-top: 30px;
+}
+.form_textinput,
+input[type="checkbox"],
+input[name="gender"],
+select[name="country"]{
+    margin-bottom: 20px;
+    color: black;
+}
+.form_textinput:focus {
+    color: rgb(0, 120, 162);
+}
+#search_calc, .form_textinput{
+    background: rgb(245, 245, 245);
+    color: rgb(0, 120, 162);
+    font-size: 1rem;
+    border-style: none;
+    border-color: rgb(245, 245, 245);
+    border-bottom: 2px solid black;
+    padding: 2px 8px 2px 8px;
+    width: 100%;
+}
+
+input[name="gender"] {
+    margin-left: 5px;
+}
+
+select[name="country"]{
+    width: 100%;
+}
+
+select[name="country"], #button_explore {
+    background: rgb(245, 245, 245);
+    font-size: larger;
+    color: black;
+    border-radius: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+textarea[value="profiletext"]{
+    height: 140px;
+}
+input, textarea, select{
+    outline: none;
+}
+
+#text_no_img{
+    display: inline-block;
+    font-size: larger;
+}
+
+.form_title{
+    color: black;
+    position: relative;
+    top: 20px;
+    left: 6px;
+    background-color: white;
+    padding: 0px;
+    marging: 0px;
+    width: fit-content;
+}
+#button_search, #button_reset, #button_submit {
+    font-size: 0.9rem;
+    color: white;
+    box-shadow: 3px 3px 8px rgb(197, 197, 197) ;
+    border-radius: 3px;
+    vertical-align: middle;
+    padding: 2px 8px 2px 8px;
+    background: rgb(0, 96, 160);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+}
+#button_reset, #button_submit{
+    padding: 4px 8px 4px 8px;;
+}
+
+#button_explore{
+    padding: 4px;
+    box-shadow:none;
+    border-style: solid;
+}
+
+/* autocomplete*/
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.autocomplete_items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.autocomplete_items div {
+    background-color: rgb(245, 245, 245);
+    font-size: smaller;
+}
+.autocomplete_items div:hover {
+    background-color: rgb(241, 114, 59);
+    color: white;
+}

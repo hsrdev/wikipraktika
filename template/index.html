@@ -341,6 +341,146 @@
 					</time>
 				</div>
 			</article>
+			<!-- TODO: 8 calculator search-->
+			<article>
+				<header>
+					<h3>Taschenrechner suchen nach Modell</h3>
+				</header>
+				<form autocomplete="off" action="/action_page.php">
+					<div class="autocomplete" >
+						<input id="search_calc" type="search" title="Type in a calculator">
+					</div>
+					<button id="button_search" type="button" onclick="submit_search()">
+						<img id="svg_icon-search" src="..\media\icon-search.svg">
+						Search
+					</button>
+				</form>
+
+				<script>
+					function autocomplete(text_input, calc_array) {
+						text_input.addEventListener("input", function(e) {
+							let contain_element, list_element, text_val=this.value;
+							closeList();
+							contain_element = document.createElement("DIV");
+							contain_element.setAttribute("id", this.id +"autocomplete_list");
+							contain_element.setAttribute("class", "autocomplete_items");
+							this.parentNode.appendChild(contain_element);
+							for(let i = 0; i < calc_array.length; i++){
+								if(calc_array[i].substring(0, text_val.length).toUpperCase()==text_val.toUpperCase()) {
+									list_element = document.createElement("DIV");
+									list_element.innerHTML = calc_array[i];
+
+									list_element.innerHTML += "<input type='hidden' value='" + calc_array[i] + "'>";
+									list_element.addEventListener("click", function(e){
+										text_input.value = this.getElementsByTagName("input")[0].value;
+										closeList();
+									});
+									contain_element.appendChild(list_element);
+								}
+							}
+						});
+
+						function closeList(e) {
+							let x = document.getElementsByClassName("autocomplete_items");
+							for (let i = 0; i < x.length; i++) {
+								x[i].parentNode.removeChild(x[i]);
+							}
+						}
+
+						document.addEventListener("click", function (e) {
+							closeList();
+						});
+					}
+
+					const calculators = [
+						"Mexico Instrument TI 30",
+						"Mexico Instrument TI 32",
+						"Mexico Instrument D*D",
+						"Casino UX5",
+						"Casino TZZ",
+						"Casino Basic",
+						"HG Calc++",
+						"HG Productive",
+						"HG GO-ON"];
+
+					autocomplete(document.getElementById("search_calc"), calculators);
+
+					function submit_search(){
+						document.getElementById("search_calc").style.color = "black";
+					}
+					<!-- TODO: open explorer-->
+					/*function openExplorer() {
+						let thePath = 'C:/Users/';
+						window.open('file://' + thePath, 'explorer');
+					}*/
+				</script>
+				<!-- TODO: 9 form new autor-->
+				<header>
+					<h2>Neuen Autor registrieren</h2>
+				</header>
+				<form id="form_newautor">
+					<p class="form_title">Autor</p>
+					<div id="form_autor">
+						Herr<input type="radio" name="gender" value="Herr" checked ><br>
+						Frau<input type="radio" name="gender" value="Frau" ><br>
+						Name<br>
+						<input class="form_textinput" type="text" name="name" required><br>
+						Email<br>
+						<input class="form_textinput" type="email" name="email" required><br>
+						Website<br>
+						<input class="form_textinput" type="url" name="website" required><br>
+						Geburtsdatum<br>
+						<input class="form_textinput" type="date" name="birthdate" required><br>
+						Nationalität<br>
+						<select name="country" required>
+							<option value="" selected disabled hidden>-- Wählen --</option>
+							<option value="Switzerland">Switzerland</option>
+							<option value="Germany">Deutschland</option>
+							<option value="France">Frankreich</option>
+							<option value="Italy">Italien</option>
+							<option value="Austria">Österreich</option>
+						</select><br>
+						Profiltext<br>
+						<textarea class="form_textinput" value="profiletext" required></textarea><br>
+						Profilbilder<br>
+						<!--TODO: open explorer-->
+						<input id="button_explore" type="button" value="Browse..." onclick="javascript:return openExplorer();" />
+						<p id="text_no_img">No files selected.</p>
+					</div>
+					<p class="form_title">Rechtliches</p>
+					<div id="form_legal">
+						<input type="checkbox" name="Conf1" required>
+						Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin<br>
+						<input type="checkbox" name="Conf2" required>
+						Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin<br>
+						<input type="checkbox" name="Conf3" required>
+						Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
+						eingereichte Medien Bilder nicht manipuliert wurden<br>
+					</div>
+					<input id="button_submit" type="submit" value="Account anlegen">
+					<input id="button_reset" type="reset" value="Eingaben zurücksetzen">
+				</form>
+			</article>
 		</main>
+		<footer>
+			<address>
+				<p class="text_italic">Bahnhofstrasse 42, 8000 Zürich</p>
+				<a href="tel:0554443322">055 444 33 22</a>
+				<a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a>
+			</address>
+			<div id="conditions">
+				<p>Alle Inhalte von
+					<span class="text_italic">Wikipraktika</span>
+					stehen unter der
+				</p>
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/">
+					<img id="png_license" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License">
+				</a>
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/">
+					Creative Commons Attribution-ShareAlike 4.0 International License
+				</a>
+				<p>und dürfen nur mit Nennung des Autors weiterverwendet werden.</p>
+			</div>
+		</footer>
 	</body>
 </html>
