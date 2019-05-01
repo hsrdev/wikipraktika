@@ -14,7 +14,7 @@
 	<body>
 		<header>
 			<!-- TODO -->
-			<img src="..\media\logo-wikipraktika.svg" id="logo" alt="logo">
+			<img src="../media/logo-wikipraktika.svg" id="logo" alt="logo">
 			<h1>Wikipraktika</h1>
 		</header>
 		<!--navigation-->
@@ -82,7 +82,7 @@
 					LC-Displays als Anzeige und werden von einer Batterie oder Solarzelle mit Strom versorgt.
 				</p>
 				<figure id="merchant_calc">
-					<img src="..\media\900px-SCM_Marchant_calculator.jpg" alt="1960s SCM Marchant calculator ">
+					<img src="../media/900px-SCM_Marchant_calculator.jpg" alt="1960s SCM Marchant calculator "/>
 					<figcaption>
 						<p>By <a href="commons.wikimedia.org/wiki/User:Bilby">Bilby</a> - Own work, <a
 								href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>,</p>
@@ -160,6 +160,7 @@
 				<header>
 					<h3>Demonstration</h3>
 				</header>
+				<!--TODO add figure and figcaption-->
 				<!-- TODO JS calc -->
 			</article>
 			<!-- 3 Bedienung-->
@@ -167,24 +168,30 @@
 				<header>
 					<h3>Bedienung des TI-Nspire CX CAS</h3>
 				</header>
-				<video id="video_ti-nspire" controls poster="..\media\ti-nspire-cx-cas.png">
-					<source src="..\media\TI-Nspire CX CAS 3D Model.webm" type="video/webm">
-					<source src="..\media\TI-Nspire CX CAS 3D Model.mp4" type="video/mp4">
-					<track src="..\media\ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" label="English" default>
-				</video>
-				<p class="video_caption">TI-Nspire CX CAS Demonstration</p>
-				<p class="reference">
-					Von TheConnerdy,
-					<a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>
-					,
-					<a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a>
-				</p>
-				<div class="last_changed">
-					<p class="last_changed_left">Zuletzt geändert von Philipp Graf</p>
-					<time class="last_changed_right" datetime="2016-02-11 12:45">
-						Donnerstag, 11. Februar 2016, 12:45
-					</time>
-				</div>
+				<figure>
+					<video id="video_ti-nspire" controls poster="../media/ti-nspire-cx-cas.png">
+						<source src="../media/TI-Nspire%20CX%20CAS%203D%20Model.webm" type="video/webm">
+						<source src="../media/TI-Nspire%20CX%20CAS%203D%20Model.mp4" type="video/mp4">
+						<track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" label="English" default>
+					</video>
+					<figcaption>
+						<p class="video_caption">TI-Nspire CX CAS Demonstration</p>
+						<p class="reference">
+							Von TheConnerdy,
+							<a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>
+							,
+							<a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a>
+						</p>
+					</figcaption>
+				</figure>
+				<footer>
+					<div class="last_changed">
+						<p class="last_changed_left">Zuletzt geändert von Philipp Graf</p>
+						<time class="last_changed_right" datetime="2016-02-11 12:45">
+							Donnerstag, 11. Februar 2016, 12:45
+						</time>
+					</div>
+				</footer>
 			</article>
 			<!-- 4 calc variations -->
 			<article>
@@ -222,12 +229,14 @@
 				<small class="caption">Taschenrechnervarianten, Source Wikipedia:
 					<a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 				</small>
-				<div class="last_changed">
-					<p class="last_changed_left">Zuletzt geändert von Gabriela Kant</p>
-					<time class="last_changed_right" datetime="2016-02-11 10:09">
-						Donnerstag, 11. Februar 2016, 10:09
-					</time>
-				</div>
+				<footer>
+					<div class="last_changed">
+						<p class="last_changed_left">Zuletzt geändert von Gabriela Kant</p>
+						<time class="last_changed_right" datetime="2016-02-11 10:09">
+							Donnerstag, 11. Februar 2016, 10:09
+						</time>
+					</div>
+				</footer>
 			</article>
 			<!-- 5 Zeitgewinn-->
 			<article>
@@ -281,17 +290,20 @@
 					</tr>
 
 				</table>
-				<object id="svg_zeitgewinn"  data="..\media\zeitgewinn.svg" type="image/svg+xml">
-
+				<figure>
+					<object id="svg_zeitgewinn" role="img"  data="../media/zeitgewinn.svg" type="image/svg+xml">
 					<!---Fallback--->
 					Ihr Browser kann leider kein svg darstellen.
-				</object>
-				<div class="last_changed">
-					<p class="last_changed_left">Zuletzt geändert von Leandra Gross</p>
-					<time class="last_changed_right" datetime="2016-02-29 13:06">
-						Freitag, 29. Februar 2016, 13:06
-					</time>
-				</div>
+					</object>
+				</figure>
+				<footer>
+					<div class="last_changed">
+						<p class="last_changed_left">Zuletzt geändert von Leandra Gross</p>
+						<time class="last_changed_right" datetime="2016-02-29 13:06">
+							Freitag, 29. Februar 2016, 13:06
+						</time>
+					</div>
+				</footer>
 			</article>
 
 			<!-- 6 calculator tricks-->
@@ -299,21 +311,26 @@
 				<header>
 					<h3>iPhone calculator tricks</h3>
 				</header>
-				<iframe
-						src="https://www.youtube.com/embed/a7rcVgb41-0"
-						frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen>
-				</iframe>
-				<p class="video_caption">iPhone Calculator Tricks on YouTube:
-					<a class="reference" href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a>
-				</p>
-				<div class="last_changed">
-					<p class="last_changed_left">Zuletzt geändert von Paul Sarner</p>
-					<time class="last_changed_right" datetime="2016-02-10 18:38">
-						Donnerstag, 10. Februar 2016, 18:38
-					</time>
-				</div>
+				<figure>
+					<iframe
+							src="https://www.youtube.com/embed/a7rcVgb41-0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+					</iframe>
+					<figcaption>
+						<p class="video_caption">iPhone Calculator Tricks on YouTube:
+							<a class="reference" href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a>
+						</p>
+					</figcaption>
+				</figure>
+				<footer>
+					<div class="last_changed">
+						<p class="last_changed_left">Zuletzt geändert von Paul Sarner</p>
+						<time class="last_changed_right" datetime="2016-02-10 18:38">
+							Donnerstag, 10. Februar 2016, 18:38
+						</time>
+					</div>
+				</footer>
 			</article>
 			<!-- TODO 7 Best calculators-->
 			<article>
@@ -334,24 +351,26 @@
 						<li>HG GO-ON</li>
 					</ol>
 				</div>
-				<div class="last_changed">
-					<p class="last_changed_left">Zuletzt geändert von Petra Summer</p>
-					<time class="last_changed_right" datetime="2016-02-11 14:13">
-						Donnerstag, 11. Februar 2016, 14:13
-					</time>
-				</div>
+				<footer>
+					<div class="last_changed">
+						<p class="last_changed_left">Zuletzt geändert von Petra Summer</p>
+						<time class="last_changed_right" datetime="2016-02-11 14:13">
+							Donnerstag, 11. Februar 2016, 14:13
+						</time>
+					</div>
+				</footer>
 			</article>
 			<!-- TODO: 8 calculator search-->
 			<article>
 				<header>
 					<h3>Taschenrechner suchen nach Modell</h3>
 				</header>
-				<form autocomplete="off" action="/action_page.php">
+				<form autocomplete="off" >
 					<div class="autocomplete" >
-						<input id="search_calc" type="search" title="Type in a calculator">
+						<input id="search_calc" type="search" title="Type in a calculator"/>
 					</div>
-					<button id="button_search" type="button" onclick="submit_search()">
-						<img id="svg_icon-search" src="..\media\icon-search.svg">
+					<button id="button_search" type="button">
+						<img id="svg_icon-search" src="../media/icon-search.svg" alt="search"/>
 						Search
 					</button>
 				</form>
@@ -370,7 +389,7 @@
 									list_element = document.createElement("DIV");
 									list_element.innerHTML = calc_array[i];
 
-									list_element.innerHTML += "<input type='hidden' value='" + calc_array[i] + "'>";
+									list_element.innerHTML += "<input type='hidden' value='" + calc_array[i] + "'/>";
 									list_element.addEventListener("click", function(e){
 										text_input.value = this.getElementsByTagName("input")[0].value;
 										closeList();
@@ -405,9 +424,6 @@
 
 					autocomplete(document.getElementById("search_calc"), calculators);
 
-					function submit_search(){
-						document.getElementById("search_calc").style.color = "black";
-					}
 					<!-- TODO: open explorer-->
 					/*function openExplorer() {
 						let thePath = 'C:/Users/';
@@ -421,44 +437,57 @@
 				<form id="form_newautor">
 					<p class="form_title">Autor</p>
 					<div id="form_autor">
-						Herr<input type="radio" name="gender" value="Herr" checked ><br>
-						Frau<input type="radio" name="gender" value="Frau" ><br>
-						Name<br>
-						<input class="form_textinput" type="text" name="name" required><br>
-						Email<br>
-						<input class="form_textinput" type="email" name="email" required><br>
-						Website<br>
-						<input class="form_textinput" type="url" name="website" required><br>
-						Geburtsdatum<br>
-						<input class="form_textinput" type="date" name="birthdate" required><br>
-						Nationalität<br>
-						<select name="country" required>
+						<div class="check_block_element">
+							<label for="gender1">Herr</label>
+							<input id="gender1" type="radio" name="gender" value="Herr" checked />
+						</div>
+						<div class="check_block_element">
+							<label for="gender2">Frau</label>
+							<input id="gender2" type="radio" name="gender" value="Frau" />
+						</div>
+						<label for="autorname">Name</label>
+						<input class="form_textinput" id="autorname" type="text" name="name" required/>
+						<label for="autoremail">Email</label>
+						<input class="form_textinput" id="autoremail" type="email" name="email" required/>
+						<label for="website">Website</label>
+						<input class="form_textinput" id="website" type="url" name="website" required/>
+						<label for="birthday">Geburtsdatum</label>
+						<input class="form_textinput" id="birthday" type="date" name="birthdate" required/>
+						<label for="country">Nationalität</label>
+						<select id="country" name="country" required>
 							<option value="" selected disabled hidden>-- Wählen --</option>
 							<option value="Switzerland">Switzerland</option>
 							<option value="Germany">Deutschland</option>
 							<option value="France">Frankreich</option>
 							<option value="Italy">Italien</option>
 							<option value="Austria">Österreich</option>
-						</select><br>
-						Profiltext<br>
-						<textarea class="form_textinput" value="profiletext" required></textarea><br>
-						Profilbilder<br>
+						</select>
+						<label for="profiletext">Profiltext</label>
+						<textarea class="form_textinput" id="profiletext" required></textarea>
+						<p>Profilbilder</p>
 						<!--TODO: open explorer-->
-						<input id="button_explore" type="button" value="Browse..." onclick="javascript:return openExplorer();" />
+						<button id="button_explore" type="button" onclick="javascript:return openExplorer();">Browse...</button>
 						<p id="text_no_img">No files selected.</p>
 					</div>
 					<p class="form_title">Rechtliches</p>
 					<div id="form_legal">
-						<input type="checkbox" name="Conf1" required>
-						Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin<br>
-						<input type="checkbox" name="Conf2" required>
-						Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin<br>
-						<input type="checkbox" name="Conf3" required>
-						Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
-						eingereichte Medien Bilder nicht manipuliert wurden<br>
+						<div class="check_block_element">
+							<input type="checkbox" name="Conf1" required/>
+							<aside>Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</aside>
+						</div>
+						<div class="check_block_element">
+							<input type="checkbox" name="Conf2" required/>
+							<aside>Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</aside>
+						</div>
+						<div class="check_block_element">
+							<input type="checkbox" name="Conf3" required/>
+							<aside>
+								Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden
+							</aside>
+						</div>
 					</div>
-					<input id="button_submit" type="submit" value="Account anlegen">
-					<input id="button_reset" type="reset" value="Eingaben zurücksetzen">
+					<button id="button_submit" type="submit" >Account anlege</button>
+					<button id="button_reset" type="reset" >Eingaben zurücksetzen</button>
 				</form>
 			</article>
 		</main>
@@ -474,7 +503,7 @@
 					stehen unter der
 				</p>
 				<a href="http://creativecommons.org/licenses/by-sa/4.0/">
-					<img id="png_license" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License">
+					<img id="png_license" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License"/>
 				</a>
 				<a href="http://creativecommons.org/licenses/by-sa/4.0/">
 					Creative Commons Attribution-ShareAlike 4.0 International License
