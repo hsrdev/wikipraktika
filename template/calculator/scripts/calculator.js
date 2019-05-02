@@ -3,17 +3,13 @@
  */
 "use strict";
 class Calculator {
-    number1;
-    number2;
-    operator;
-
     constructor() {
         this.clear();
     }
     clear() {
-        this.number1 = null;
-        this.number2 = null;
-        this.operator = null;
+        this.number1 = '';
+        this.number2 = '';
+        this.operator = '';
     }
     clearDisplay(display) {
         display.innerHTML = '';
@@ -25,6 +21,7 @@ class Calculator {
     getNumber2() {
         return this.number2;
     }
+
     getOperator() {
         return this.operator;
     }
@@ -43,7 +40,7 @@ class Calculator {
 
     hasOperator() {
         let ret = false;
-        if (this.operator !== null) {
+        if (this.operator !== '') {
             ret = true;
         }
         return ret;
@@ -56,6 +53,9 @@ class Calculator {
     }
     calc (number1, number2, operator) {
         let result = 0;
+        if (isNaN(number1) || isNaN(number2)) {
+            return false;
+        }
         switch (operator) {
             case '+':
                 result = number1 + number2;
@@ -99,19 +99,20 @@ window.addEventListener('DOMContentLoaded', function() {
 
         }
     }
-
+    function setOperator (e) {
+        calculator.setOperator(e.target.value);
+        calculator.clearDisplay(input);
+        output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
+    }
 
     let numbers = document.getElementsByClassName('number');
     for (let i = 0; i < numbers.length; i++) {
-        numbers[i].addEventListener('click', e => setNumber(e))
+        numbers[i].addEventListener('click', e => setNumber(e));
     }
 
     let operators = document.getElementsByClassName('operator');
     for (let i = 0; i < operators.length; i++) {
-        operators[i].addEventListener('click', e => {
-            calculator.setOperator(e.target.value);
-            output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
-        })
+        operators[i].addEventListener('click', e => setOperator(e));
     }
 
     document.getElementById('key-c').addEventListener('click', () => {
@@ -123,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('key-=').addEventListener('click', () => {
        let result = calculator.convertResult();
        if (result === false) {
-           input.innerHTML = 'invalid operation';
+           input.innerHTML = 'invalid calculation';
        } else {
            calculator.setNumber1(result);
            input.innerHTML = result;

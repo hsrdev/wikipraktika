@@ -161,8 +161,9 @@ video {
     vertical-align: middle;
 }
 #demo_calc iframe{
+    display: inline-block;
     width: 80%;
-    height: 100vh;
+    height: 50rem;
     border: none;
     border-radius: 1rem;
 }
