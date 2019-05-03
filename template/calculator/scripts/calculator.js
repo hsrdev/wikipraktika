@@ -112,12 +112,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
     let numbers = document.getElementsByClassName('number');
     for (let i = 0; i < numbers.length; i++) {
-        numbers[i].addEventListener('click', e => setNumber(e));
+        numbers[i].addEventListener('click', setNumber);
     }
 
     let operators = document.getElementsByClassName('operator');
     for (let i = 0; i < operators.length; i++) {
-        operators[i].addEventListener('click', e => setOperation(e));
+        operators[i].addEventListener('click', setOperation);
     }
 
     document.getElementById('key-c').addEventListener('click', () => {

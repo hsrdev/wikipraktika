@@ -160,10 +160,11 @@ video {
     vertical-align: middle;
 }
 
+/*js calc*/
 #demo_calc iframe{
     display: inline-block;
-    width: 50vw;
-    height: 60vw;
+    width: calc(100vw - 50vw);
+    height: calc(100vw - 40vw);
     border: none;
     border-radius: 1rem;
 }
