@@ -372,71 +372,27 @@
 				<header>
 					<h3>Taschenrechner suchen nach Modell</h3>
 				</header>
-				<form autocomplete="off" >
+				<form>
 					<div class="autocomplete" >
-						<input id="search_calc" type="search" title="Type in a calculator"/>
+						<input id="search_calc" type="search" title="Type in a calculator" list="calculators">
 					</div>
 					<button id="button_search" type="button">
 						<img id="svg_icon-search" src="../media/icon-search.svg" alt="search"/>
 						Search
 					</button>
 				</form>
+				<datalist id="calculators">
+					<option value="Mexico Instrument TI 30">
+					<option value="Mexico Instrument TI 32">
+					<option value="Mexico Instrument D*D">
+					<option value="Casino UX5">
+					<option value="Casino TZZ">
+					<option value="Casino Basic">
+					<option value="HG Calc++">
+					<option value="HG Productive">
+					<option value="HG GO-ON">
+				</datalist>
 
-				<script>
-					function autocomplete(text_input, calc_array) {
-						text_input.addEventListener("input", function(e) {
-							let contain_element, list_element, text_val=this.value;
-							closeList();
-							contain_element = document.createElement("DIV");
-							contain_element.setAttribute("id", this.id +"autocomplete_list");
-							contain_element.setAttribute("class", "autocomplete_items");
-							this.parentNode.appendChild(contain_element);
-							for(let i = 0; i < calc_array.length; i++){
-								if(calc_array[i].substring(0, text_val.length).toUpperCase()==text_val.toUpperCase()) {
-									list_element = document.createElement("DIV");
-									list_element.innerHTML = calc_array[i];
-
-									list_element.innerHTML += "<input type='hidden' value='" + calc_array[i] + "'/>";
-									list_element.addEventListener("click", function(e){
-										text_input.value = this.getElementsByTagName("input")[0].value;
-										closeList();
-									});
-									contain_element.appendChild(list_element);
-								}
-							}
-						});
-
-						function closeList(e) {
-							let x = document.getElementsByClassName("autocomplete_items");
-							for (let i = 0; i < x.length; i++) {
-								x[i].parentNode.removeChild(x[i]);
-							}
-						}
-
-						document.addEventListener("click", function (e) {
-							closeList();
-						});
-					}
-
-					const calculators = [
-						"Mexico Instrument TI 30",
-						"Mexico Instrument TI 32",
-						"Mexico Instrument D*D",
-						"Casino UX5",
-						"Casino TZZ",
-						"Casino Basic",
-						"HG Calc++",
-						"HG Productive",
-						"HG GO-ON"];
-
-					autocomplete(document.getElementById("search_calc"), calculators);
-
-					<!-- TODO: open explorer-->
-					/*function openExplorer() {
-						let thePath = 'C:/Users/';
-						window.open('file://' + thePath, 'explorer');
-					}*/
-				</script>
 				<!-- TODO: 9 form new autor-->
 				<header>
 					<h2>Neuen Autor registrieren</h2>
@@ -471,10 +427,8 @@
 						</select>
 						<label for="profiletext">Profiltext</label>
 						<textarea class="form_textinput" id="profiletext" required></textarea>
-						<p>Profilbilder</p>
-						<!--TODO: open explorer-->
-						<button id="button_explore" type="button" onclick="javascript:return openExplorer();">Browse...</button>
-						<p id="text_no_img">No files selected.</p>
+						<label for="button_explore">Profilbilder</label>
+						<input id="button_explore" type="file" name="profilepic"/>
 					</div>
 					<p class="form_title">Rechtliches</p>
 					<div id="form_legal">
@@ -493,7 +447,7 @@
 							</aside>
 						</div>
 					</div>
-					<button id="button_submit" type="submit" >Account anlege</button>
+					<button id="button_submit" type="submit" >Account anlegen</button>
 					<button id="button_reset" type="reset" >Eingaben zurücksetzen</button>
 				</form>
 			</article>

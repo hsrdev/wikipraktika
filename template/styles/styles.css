@@ -124,7 +124,7 @@ address a{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    width: 70%;
 }
 
 #video_youtube iframe {
@@ -137,7 +137,7 @@ address a{
 }
 
 #wrapper_youtube{
-    padding-bottom: 56.25%;
+    padding-bottom: calc(56.25% - 1em);
     overflow: hidden;
     position:relative;
 }
@@ -163,8 +163,8 @@ video {
 /*js calc*/
 #demo_calc iframe{
     display: inline-block;
-    width: calc(100vw - 50vw);
-    height: calc(100vw - 40vw);
+    width: 50vw;
+    height: 60vw;
     border: none;
     border-radius: 1rem;
 }
@@ -382,7 +382,8 @@ select[name="country"]{
     width: 100%;
 }
 
-select[name="country"], #button_explore {
+
+select[name="country"], input[type="file"] {
     background: rgb(245, 245, 245);
     font-size: larger;
     color: black;
@@ -390,17 +391,21 @@ select[name="country"], #button_explore {
     padding-top: 2px;
     padding-bottom: 2px;
 }
+#button_explore{
+    border:none;
+    padding: 4px;
+    box-shadow:none;
+    background-color: white;
+    display: block;
+    color: rgb(137, 137, 137);
+}
+
 textarea{
     height: 140px;
     display:block;
 }
 input, textarea, select{
     outline: none;
-}
-
-#text_no_img{
-    display: inline-block;
-    font-size: larger;
 }
 
 .form_title{
@@ -430,11 +435,7 @@ input, textarea, select{
     padding: 4px 8px 4px 8px;;
 }
 
-#button_explore{
-    padding: 4px;
-    box-shadow:none;
-    border-style: solid;
-}
+
 
 /* autocomplete*/
 .autocomplete {
@@ -442,7 +443,10 @@ input, textarea, select{
     display: inline-block;
     margin-bottom: 40px;
 }
-.autocomplete_items {
+#search_calc{
+    width: 250px;
+}
+/*.autocomplete_items {
     position: absolute;
     border: 1px solid #d4d4d4;
     border-bottom: none;
@@ -460,3 +464,4 @@ input, textarea, select{
     background-color: rgb(241, 114, 59);
     color: white;
 }
+*/
