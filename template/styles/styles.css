@@ -163,7 +163,7 @@ video {
 /*js calc*/
 #demo_calc iframe{
     display: inline-block;
-    width: 50vw;
+    width: calc(56.25% - 1em);
     height: 60vw;
     border: none;
     border-radius: 1rem;
