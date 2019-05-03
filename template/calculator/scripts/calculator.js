@@ -6,14 +6,7 @@ class Calculator {
     constructor() {
         this.clear();
     }
-    clear() {
-        this.number1 = '';
-        this.number2 = '';
-        this.operator = '';
-    }
-    clearDisplay(display) {
-        display.innerHTML = '';
-    }
+/*Getter*/
     getNumber1() {
         return this.number1;
     }
@@ -26,6 +19,7 @@ class Calculator {
         return this.operator;
     }
 
+/*Setter*/
     setNumber1(number1) {
         this.number1 += number1;
     }
@@ -51,6 +45,17 @@ class Calculator {
         this.clear();
         return res;
     }
+
+    clear() {
+        this.number1 = '';
+        this.number2 = '';
+        this.operator = '';
+    }
+
+    clearDisplay(display) {
+        display.innerHTML = '';
+    }
+
     calc (number1, number2, operator) {
         let result = 0;
         if (isNaN(number1) || isNaN(number2)) {
@@ -71,7 +76,7 @@ class Calculator {
                     result = number1 / number2;
                     break;
                 }
-                result = false;
+                result = true;
                 break;
         }
         return result;
@@ -89,9 +94,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function setNumber (e) {
         if (calculator.hasOperator()) {
-            calculator.setNumber2(e.target.value);
-            output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
-            input.innerHTML = calculator.getNumber2();
+                calculator.setNumber2(e.target.value);
+                output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
+                input.innerHTML = calculator.getNumber2();
         } else {
             calculator.setNumber1(e.target.value);
             calculator.clearDisplay(output);
@@ -99,7 +104,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         }
     }
-    function setOperator (e) {
+    function setOperation (e) {
         calculator.setOperator(e.target.value);
         calculator.clearDisplay(input);
         output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
@@ -112,7 +117,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     let operators = document.getElementsByClassName('operator');
     for (let i = 0; i < operators.length; i++) {
-        operators[i].addEventListener('click', e => setOperator(e));
+        operators[i].addEventListener('click', e => setOperation(e));
     }
 
     document.getElementById('key-c').addEventListener('click', () => {
@@ -123,7 +128,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('key-=').addEventListener('click', () => {
        let result = calculator.convertResult();
-       if (result === false) {
+       if (result === true) {
            input.innerHTML = 'invalid calculation';
        } else {
            calculator.setNumber1(result);
@@ -141,4 +146,4 @@ const testCalc = new Calculator();
 console.log(testCalc.calc(10, 7, '+'), "should be", 17);
 console.log(testCalc.calc(20, 5, '-'), "should be", 15);
 console.log(testCalc.calc(5, 6, '*'), "should be", 30);
-console.log(testCalc.calc(10, 2, '/'), "should be", true); // true = hasError
+console.log(testCalc.calc(10, 0, '/'), "should be", true); // true = hasError
