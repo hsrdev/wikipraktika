@@ -59,7 +59,7 @@ class Calculator {
     calc (number1, number2, operator) {
         let result = 0;
         if (isNaN(number1) || isNaN(number2)) {
-            return false;
+            return true;
         }
         switch (operator) {
             case '+':
@@ -94,9 +94,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function setNumber (e) {
         if (calculator.hasOperator()) {
-                calculator.setNumber2(e.target.value);
-                output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
-                input.innerHTML = calculator.getNumber2();
+            calculator.setNumber2(e.target.value);
+            output.innerHTML = calculator.getNumber1() + ' ' + calculator.getOperator();
+            input.innerHTML = calculator.getNumber2();
         } else {
             calculator.setNumber1(e.target.value);
             calculator.clearDisplay(output);
