@@ -434,8 +434,12 @@ input, textarea, select{
 #button_reset, #button_submit{
     padding: 4px 8px 4px 8px;;
 }
-
-
+#button_search:active {
+    border: 2px solid black;
+}
+#button_search:hover {
+    color: #888888;
+}
 
 /* autocomplete*/
 .autocomplete {
@@ -446,22 +450,3 @@ input, textarea, select{
 #search_calc{
     width: 250px;
 }
-/*.autocomplete_items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-}
-.autocomplete_items div {
-    background-color: rgb(245, 245, 245);
-    font-size: smaller;
-}
-.autocomplete_items div:hover {
-    background-color: rgb(241, 114, 59);
-    color: white;
-}
-*/
